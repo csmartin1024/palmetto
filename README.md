@@ -12,6 +12,9 @@ The backend is written with NodeJS / Express.
 
 ## Setup
 
+NOTE!!: This will not run with Node.js ≥ 13.10.0
+See [here](https://github.com/sindresorhus/got/issues/1107)
+
 If you want to run this, please note you must update the .env file with a correct Accuweather API key
 
 ```
