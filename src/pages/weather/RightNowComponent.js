@@ -18,7 +18,7 @@ export default props => {
         </div>
         <div className="card-imag">
           <figure className="image is-2by1">
-            <img src={iconURL}></img>
+            <img src={iconURL} alt="this should be the current weather"></img>
           </figure>
         </div>
       </div>

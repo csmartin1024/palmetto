@@ -21,7 +21,7 @@ const renderDay = dailyForecast => {
         <div className="column is-half">
           <figure className="media-left">
             <p className="image is-64x64">
-              <img src={iconURL}></img>
+              <img src={iconURL} alt="this should be the current weather"></img>
             </p>
           </figure>
           <div className="media-content">
