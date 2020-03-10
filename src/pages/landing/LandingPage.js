@@ -27,7 +27,7 @@ class LandingPage extends Component {
   }
   submit() {
     if (this.state.cityState.indexOf(',') < 0) {
-      alert(inputFormatAlert + 'h');
+      alert(inputFormatAlert);
       return;
     }
     const cityStateParts = this.state.cityState.split(',');
@@ -37,13 +37,11 @@ class LandingPage extends Component {
     const isStateValid = this.validateState(state);
 
     if (!isCityValid || !isStateValid) {
-      alert(inputFormatAlert + 'f');
+      alert(inputFormatAlert);
       return;
     }
 
     alert(`Your city is ${city} and your state is ${state}`);
-    //Route to WeatherPage
-    // let history = useHistory();
     const { history } = this.props;
     history.push(`/weather?city=${city}&state=${state}`);
   }
