@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router';
 import DailyForecastComponent from './DailyForecastComponent';
 import HourlyForecastComponent from './HourlyForecastComponent';
@@ -15,14 +15,13 @@ class WeatherPage extends Component {
       city,
       stateCode: state,
       location: { city, state },
-      currentConditions: {},
-      dailyForecast: {},
-      weeklyForecast: {}
+      dataLoaded: false
     };
     this.renderHeader = this.renderHeader.bind(this);
     this.renderHero = this.renderHero.bind(this);
     this.loadLocation = this.loadLocation.bind(this);
     this.loadLocationData = this.loadLocationData.bind(this);
+    this.renderLayot = this.renderLayot.bind(this);
   }
   async componentDidMount() {
     //TODO: Less of a todo and more of a general comment for prying eyes, I definitely think this pattern is probably out of date
@@ -30,19 +29,26 @@ class WeatherPage extends Component {
     // the it works for now method. Trying not to pre-optimize
     try {
       await this.loadLocation();
-      await this.loadLocationData();
+      // Just adding some basic dont make these calls if we didn't find the location
+      if (this.state.locationFound) await this.loadLocationData();
     } catch (err) {
       console.log('Something went wrong', err);
     }
   }
 
+  // Simple fetch call that will get the location used for future conditions/forecast
   async loadLocation() {
     const locationListAPIResponse = await fetch(
       `/api/locations?&city=${encodeURIComponent(this.state.city)}&state=${this.state.stateCode}`
     );
     const locationList = await locationListAPIResponse.json();
-    const location = locationList.data.locations[0];
-    this.setState({ location });
+
+    if (locationList.data.locations.length > 0) {
+      const location = locationList.data.locations[0];
+      this.setState({ location, locationFound: true });
+    } else {
+      this.setState({ locationFound: false });
+    }
   }
 
   // I know, I know, this is hideous, and in a production system this is moved into a separate file (AT LEAST)
@@ -65,7 +71,7 @@ class WeatherPage extends Component {
     const hourlyForecast = hourlyForecastData.data.forecast;
     const weeklyForecast = weeklyForecastData.data.forecast;
 
-    this.setState({ currentConditions, dailyForecast, hourlyForecast, weeklyForecast });
+    this.setState({ dataLoaded: true, currentConditions, dailyForecast, hourlyForecast, weeklyForecast });
   }
 
   renderHeader() {
@@ -118,11 +124,34 @@ class WeatherPage extends Component {
     );
   }
 
+  renderLayot() {
+    return (
+      <Fragment>
+        {this.renderHero()}
+        {this.renderBodyTiles()}
+      </Fragment>
+    );
+  }
+
+  renderNoWeather() {
+    return (
+      <section class="hero is-dark is-fullheight">
+        {this.renderHeader()}
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <h1 class="title">NO WEATHER FOUND</h1>
+            <h2 class="subtitle">Sorry about that</h2>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   render() {
     return (
       <div class="weather-page">
-        {this.renderHero()}
-        {this.renderBodyTiles()}
+        {this.state.locationFound && this.state.dataLoaded && this.renderLayot()}
+        {!this.state.locationFound && this.renderNoWeather()}
       </div>
     );
   }

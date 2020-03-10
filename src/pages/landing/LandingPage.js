@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import BackgroundImage from '../../images/background@3x.png';
-const inputFormatAlert = 'Please enter a city and state in the following format Portland, OR';
+const inputFormatAlert = 'Please enter a city and valid state in the following format Portland, OR';
 const stateRegex = new RegExp(
   '^(?:(A[KLRZ]|C[AOT]|D[CE]|FL|GA|HI|I[ADLN]|K[SY]|LA|M[ADEINOST]|N[CDEHJMVY]|O[HKR]|P[AR]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY]))$'
 );
@@ -9,7 +9,7 @@ const stateRegex = new RegExp(
 class LandingPage extends Component {
   constructor(props) {
     super(props);
-    this.state = { cityState: 'Portland, OR' };
+    this.state = { cityState: '' };
     this.submit = this.submit.bind(this);
   }
   validateCity(city) {
@@ -40,8 +40,6 @@ class LandingPage extends Component {
       alert(inputFormatAlert);
       return;
     }
-
-    alert(`Your city is ${city} and your state is ${state}`);
     const { history } = this.props;
     history.push(`/weather?city=${city}&state=${state}`);
   }

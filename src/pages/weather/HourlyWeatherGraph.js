@@ -27,7 +27,7 @@ export default class HourlyWeatherGraph extends Component {
         {
           color: 'rgba(206, 108, 100, 0.31)',
           type: 'area',
-          xValueFormatString: 'hh:mm a',
+          xValueFormatString: '',
           xValueType: 'dateTime',
           yValueFormatString: '#° F',
           dataPoints

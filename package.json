@@ -23,7 +23,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node-env-run server/app.js --exec \"nodemon -r esm server/app.js | pino-colada\"",
-    "start-server": "node-env-run server/app.js --exec \"nodemon -r esm server/app.js | pino-colada\"",
     "dev": "run-p server start"
   },
   "eslintConfig": {
