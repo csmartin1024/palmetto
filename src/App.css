@@ -1,38 +1,92 @@
+@font-face {
+  font-family: 'Eczar';
+  src: local('Eczar'), url(./fonts/Eczar-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'EczarSemiBold';
+  src: local('EczarSemiBold'), url(./fonts/Eczar-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins'), url(./fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+}
+
+#root {
+  height: 100%;
+}
+
 .App {
-  text-align: center;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weather-page {
+  background-image: linear-gradient(to bottom, #fff3ea, #fff8f2 30%, #ffffff 57%, #ffddd5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.landing-page {
+  /* height: 100%; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.landing-page .hero {
+  background-color: none;
 }
 
-.App-link {
-  color: #61dafb;
+.landing-page .hero .hero-head {
+  height: 20vh;
+  padding: 5%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.landing-page .hero .title {
+  color: #9e4e5d;
+  font-family: EczarSemiBold;
+  font-weight: 600;
+}
+
+.landing-page .hero button .submit {
+  color: #ffa790;
+}
+
+/* input {
+  color: #ffa790;
+} */
+
+.hero-body .title {
+  color: #9e4e5d;
+  font-family: EczarSemiBold;
+  font-weight: 600;
+}
+
+.body {
+  color: #1e252c;
+  font-family: Poppins;
+}
+
+.body .right-now .title {
+  font-family: EczarSemiBold;
+  letter-spacing: normal;
+  color: #9cadb6;
+}
+
+.body .right-now .subtitle {
+  letter-spacing: 3px;
+}
+
+.body .hourly .title {
+  letter-spacing: 3px;
+}
+
+.body .weekly .title {
+  letter-spacing: 3px;
+}
+
+.body .daily .title {
+  letter-spacing: 3px;
 }

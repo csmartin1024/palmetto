@@ -1,0 +1,207 @@
+{
+    "data": {
+        "forecast": [{
+                "DateTime": "2020-03-07T11:00:00-08:00",
+                "EpochDateTime": 1583607600,
+                "WeatherIcon": 12,
+                "IconPhrase": "Showers",
+                "HasPrecipitation": true,
+                "PrecipitationType": "Rain",
+                "PrecipitationIntensity": "Light",
+                "IsDaylight": true,
+                "Temperature": {
+                    "Value": 45.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "PrecipitationProbability": 55,
+                "MobileLink": "http://m.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=11&lang=en-us",
+                "Link": "http://www.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=11&lang=en-us"
+            },
+            {
+                "DateTime": "2020-03-07T12:00:00-08:00",
+                "EpochDateTime": 1583611200,
+                "WeatherIcon": 12,
+                "IconPhrase": "Showers",
+                "HasPrecipitation": true,
+                "PrecipitationType": "Rain",
+                "PrecipitationIntensity": "Light",
+                "IsDaylight": true,
+                "Temperature": {
+                    "Value": 45.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "PrecipitationProbability": 58,
+                "MobileLink": "http://m.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=12&lang=en-us",
+                "Link": "http://www.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=12&lang=en-us"
+            },
+            {
+                "DateTime": "2020-03-07T13:00:00-08:00",
+                "EpochDateTime": 1583614800,
+                "WeatherIcon": 12,
+                "IconPhrase": "Showers",
+                "HasPrecipitation": true,
+                "PrecipitationType": "Rain",
+                "PrecipitationIntensity": "Light",
+                "IsDaylight": true,
+                "Temperature": {
+                    "Value": 46.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "PrecipitationProbability": 53,
+                "MobileLink": "http://m.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=13&lang=en-us",
+                "Link": "http://www.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=13&lang=en-us"
+            },
+            {
+                "DateTime": "2020-03-07T14:00:00-08:00",
+                "EpochDateTime": 1583618400,
+                "WeatherIcon": 7,
+                "IconPhrase": "Cloudy",
+                "HasPrecipitation": false,
+                "IsDaylight": true,
+                "Temperature": {
+                    "Value": 47.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "PrecipitationProbability": 49,
+                "MobileLink": "http://m.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=14&lang=en-us",
+                "Link": "http://www.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=14&lang=en-us"
+            },
+            {
+                "DateTime": "2020-03-07T15:00:00-08:00",
+                "EpochDateTime": 1583622000,
+                "WeatherIcon": 7,
+                "IconPhrase": "Cloudy",
+                "HasPrecipitation": false,
+                "IsDaylight": true,
+                "Temperature": {
+                    "Value": 49.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "PrecipitationProbability": 45,
+                "MobileLink": "http://m.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=15&lang=en-us",
+                "Link": "http://www.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=15&lang=en-us"
+            },
+            {
+                "DateTime": "2020-03-07T16:00:00-08:00",
+                "EpochDateTime": 1583625600,
+                "WeatherIcon": 7,
+                "IconPhrase": "Cloudy",
+                "HasPrecipitation": false,
+                "IsDaylight": true,
+                "Temperature": {
+                    "Value": 48.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "PrecipitationProbability": 43,
+                "MobileLink": "http://m.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=16&lang=en-us",
+                "Link": "http://www.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=16&lang=en-us"
+            },
+            {
+                "DateTime": "2020-03-07T17:00:00-08:00",
+                "EpochDateTime": 1583629200,
+                "WeatherIcon": 7,
+                "IconPhrase": "Cloudy",
+                "HasPrecipitation": false,
+                "IsDaylight": true,
+                "Temperature": {
+                    "Value": 47.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "PrecipitationProbability": 47,
+                "MobileLink": "http://m.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=17&lang=en-us",
+                "Link": "http://www.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=17&lang=en-us"
+            },
+            {
+                "DateTime": "2020-03-07T18:00:00-08:00",
+                "EpochDateTime": 1583632800,
+                "WeatherIcon": 12,
+                "IconPhrase": "Showers",
+                "HasPrecipitation": true,
+                "PrecipitationType": "Rain",
+                "PrecipitationIntensity": "Light",
+                "IsDaylight": true,
+                "Temperature": {
+                    "Value": 45.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "PrecipitationProbability": 51,
+                "MobileLink": "http://m.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=18&lang=en-us",
+                "Link": "http://www.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=18&lang=en-us"
+            },
+            {
+                "DateTime": "2020-03-07T19:00:00-08:00",
+                "EpochDateTime": 1583636400,
+                "WeatherIcon": 38,
+                "IconPhrase": "Mostly cloudy",
+                "HasPrecipitation": false,
+                "IsDaylight": false,
+                "Temperature": {
+                    "Value": 43.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "PrecipitationProbability": 40,
+                "MobileLink": "http://m.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=19&lang=en-us",
+                "Link": "http://www.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=19&lang=en-us"
+            },
+            {
+                "DateTime": "2020-03-07T20:00:00-08:00",
+                "EpochDateTime": 1583640000,
+                "WeatherIcon": 38,
+                "IconPhrase": "Mostly cloudy",
+                "HasPrecipitation": false,
+                "IsDaylight": false,
+                "Temperature": {
+                    "Value": 41.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "PrecipitationProbability": 37,
+                "MobileLink": "http://m.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=20&lang=en-us",
+                "Link": "http://www.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=20&lang=en-us"
+            },
+            {
+                "DateTime": "2020-03-07T21:00:00-08:00",
+                "EpochDateTime": 1583643600,
+                "WeatherIcon": 12,
+                "IconPhrase": "Showers",
+                "HasPrecipitation": true,
+                "PrecipitationType": "Rain",
+                "PrecipitationIntensity": "Light",
+                "IsDaylight": false,
+                "Temperature": {
+                    "Value": 39.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "PrecipitationProbability": 40,
+                "MobileLink": "http://m.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=21&lang=en-us",
+                "Link": "http://www.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=21&lang=en-us"
+            },
+            {
+                "DateTime": "2020-03-07T22:00:00-08:00",
+                "EpochDateTime": 1583647200,
+                "WeatherIcon": 38,
+                "IconPhrase": "Mostly cloudy",
+                "HasPrecipitation": false,
+                "IsDaylight": false,
+                "Temperature": {
+                    "Value": 39.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "PrecipitationProbability": 36,
+                "MobileLink": "http://m.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=22&lang=en-us",
+                "Link": "http://www.accuweather.com/en/us/portland-or/97209/hourly-weather-forecast/350473?day=1&hbhhour=22&lang=en-us"
+            }
+        ]
+    }
+}
