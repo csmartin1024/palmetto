@@ -14,7 +14,6 @@ export default class HTTPClient {
   async get(url) {
     // We dont want the have confusion about beginning slash or not so just take it out if it exists
     const deslashedURL = this.deslash(url);
-    console.log('deslashed', deslashedURL);
     return this.client.get(deslashedURL).json();
   }
 }

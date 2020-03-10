@@ -76,9 +76,9 @@ class WeatherPage extends Component {
 
   renderHeader() {
     return (
-      <div class="hero-head">
-        <nav class="navbar">
-          <div class="container">
+      <div className="hero-head">
+        <nav className="navbar">
+          <div className="container">
             <div className="navbar-brand">
               <a className="navbar-item" href="/">
                 Go Back
@@ -92,11 +92,11 @@ class WeatherPage extends Component {
 
   renderHero() {
     return (
-      <section class="hero">
+      <section className="hero">
         {this.renderHeader()}
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title is-1">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title is-1">
               In {this.state.location.city}, {this.state.location.state}...
             </h1>
           </div>
@@ -107,14 +107,14 @@ class WeatherPage extends Component {
 
   renderBodyTiles() {
     return (
-      <section class="section body">
-        <div class="container">
-          <div class="tile is-ancestor">
-            <div class="tile is-parent is-4 is-vertical">
+      <section className="section body">
+        <div className="container">
+          <div className="tile is-ancestor">
+            <div className="tile is-parent is-4 is-vertical">
               <RightNowComponent currentConditions={this.state.currentConditions} />
               <DailyForecastComponent dailyForecast={this.state.dailyForecast} />
             </div>
-            <div class="tile is-vertical is-parent">
+            <div className="tile is-vertical is-parent">
               <HourlyForecastComponent hourlyForecast={this.state.hourlyForecast} />
               <WeeklyForecastComponent weeklyForecast={this.state.weeklyForecast} />
             </div>
@@ -135,12 +135,12 @@ class WeatherPage extends Component {
 
   renderNoWeather() {
     return (
-      <section class="hero is-dark is-fullheight">
+      <section className="hero is-dark is-fullheight">
         {this.renderHeader()}
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <h1 class="title">NO WEATHER FOUND</h1>
-            <h2 class="subtitle">Sorry about that</h2>
+        <div className="hero-body">
+          <div className="container has-text-centered">
+            <h1 className="title">NO WEATHER FOUND</h1>
+            <h2 className="subtitle">Sorry about that</h2>
           </div>
         </div>
       </section>
@@ -149,7 +149,7 @@ class WeatherPage extends Component {
 
   render() {
     return (
-      <div class="weather-page">
+      <div className="weather-page">
         {this.state.locationFound && this.state.dataLoaded && this.renderLayot()}
         {!this.state.locationFound && this.renderNoWeather()}
       </div>

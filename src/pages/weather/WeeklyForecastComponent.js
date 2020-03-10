@@ -10,23 +10,23 @@ const renderDay = dailyForecast => {
   const formattedDate = moment(forecastDate).format('dddd');
 
   return (
-    <article key={v4()} class="medi">
-      <div class="columns">
-        <div class="column is-half">
-          <div class="media-content">
+    <article key={v4()} className="medi">
+      <div className="columns">
+        <div className="column is-half">
+          <div className="media-content">
             <p>{formattedDate}</p>
             {Maximum.Value}° F / {Minimum.Value}° F
           </div>
         </div>
-        <div class="column is-half">
-          <figure class="media-left">
-            <p class="image is-64x64">
+        <div className="column is-half">
+          <figure className="media-left">
+            <p className="image is-64x64">
               <img src={iconURL}></img>
             </p>
           </figure>
-          <div class="media-content">
-            <div class="field">
-              <p class="">{Day.LongPhrase}</p>
+          <div className="media-content">
+            <div className="field">
+              <p className="">{Day.LongPhrase}</p>
             </div>
           </div>
         </div>
@@ -41,8 +41,8 @@ export default props => {
   const forecasts = DailyForecasts ? DailyForecasts.map(renderDay) : [];
 
   return (
-    <div class="tile is-child box weekly">
-      <h6 class="title is-6">THIS WEEK</h6>
+    <div className="tile is-child box weekly">
+      <h6 className="title is-6">THIS WEEK</h6>
       {forecasts}
     </div>
   );

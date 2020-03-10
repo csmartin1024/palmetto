@@ -6,18 +6,18 @@ export default props => {
   const currentTemperature = Temperature ? Temperature.Imperial.Value : '';
   const iconURL = `${WEATHER_ICON_URL}/${WeatherIcon}.svg`;
   return (
-    <div class="tile is-child box right-now">
-      <div class="car">
-        <div class="card-conten">
-          <div class="content">
-            <h6 class="subtitle is-6">RIGHT NOW</h6>
-            <h6 class="title is-3">
+    <div className="tile is-child box right-now">
+      <div className="car">
+        <div className="card-conten">
+          <div className="content">
+            <h6 className="subtitle is-6">RIGHT NOW</h6>
+            <h6 className="title is-3">
               {currentTemperature} & {WeatherText}
             </h6>
           </div>
         </div>
-        <div class="card-imag">
-          <figure class="image is-2by1">
+        <div className="card-imag">
+          <figure className="image is-2by1">
             <img src={iconURL}></img>
           </figure>
         </div>

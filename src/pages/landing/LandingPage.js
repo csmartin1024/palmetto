@@ -52,34 +52,34 @@ class LandingPage extends Component {
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat'
         }}
-        class="hero is-fullheight"
+        className="hero is-fullheight"
       >
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title has-text-white is-1">How's the weather?</h1>
-            <div class="columns">
-              <div class="column is">
-                <div class="field is-grouped">
-                  <p class="control is-expanded">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title has-text-white is-1">How's the weather?</h1>
+            <div className="columns">
+              <div className="column is">
+                <div className="field is-grouped">
+                  <p className="control is-expanded">
                     <input
                       value={this.state.cityState}
                       onChange={e => this.setState({ cityState: e.target.value })}
-                      class="search input is-medium is-rounded"
+                      className="search input is-medium is-rounded"
                       type="text"
                       placeholder="Enter City, State (eg: Portland, OR)"
                     ></input>
                   </p>
-                  <p class="control">
-                    <button onClick={this.submit} class="button is-medium submit">
+                  <p className="control">
+                    <button onClick={this.submit} className="button is-medium submit">
                       <span>Let’s check</span>
-                      <span class="icon is-small">
-                        <i class="fas fa-long-arrow-alt-right"></i>
+                      <span className="icon is-small">
+                        <i className="fas fa-long-arrow-alt-right"></i>
                       </span>
                     </button>
                   </p>
                 </div>
               </div>
-              <div class="column"></div>
+              <div className="column"></div>
             </div>
           </div>
         </div>
