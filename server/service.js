@@ -23,6 +23,7 @@ export const getLocationsByCityAndState = async ({ city, state, tracer }) => {
     // response.data = { locations };
     logger.info(`Retrieved locations from accuweather by city (${city}) and state (${state})`, tracer);
   } catch (error) {
+    console.log(error);
     logger.error(`There was an error querying locations from accuweather city (${city}) and state (${state})`, error, tracer);
     response.error = 'An error occurred querying locations from the server';
   }
@@ -49,6 +50,7 @@ export const getCurrentConditions = async ({ locationId, tracer }) => {
     response.data = { currentConditions };
     logger.info(`Retrieved current conditions from accuweather (locationId: ${locationId})`, tracer);
   } catch (error) {
+    console.log(error);
     logger.error(`There was an error getting current conditions from accuweather (locationId: ${locationId})`, error, tracer);
     response.error = 'An error occurred querying locations from the server';
   }
@@ -62,6 +64,7 @@ export const getHourlyForecast = async ({ locationId, tracer }) => {
     response.data = { forecast };
     logger.info(`Retrieved hourly forecast from accuweather (locationId: ${locationId})`, tracer);
   } catch (error) {
+    console.log(error);
     logger.error(`There was an error getting hourly forecast from accuweather (locationId: ${locationId})`, error, tracer);
     response.error = 'An error occurred getting hourly forecast from the server';
   }
@@ -75,6 +78,7 @@ export const getDailyForecast = async ({ locationId, tracer }) => {
     response.data = { forecast };
     logger.info(`Retrieved daily forecast from accuweather (locationId: ${locationId})`, tracer);
   } catch (error) {
+    console.log(error);
     logger.error(`There was an error getting daily forecast from accuweather (locationId: ${locationId})`, error, tracer);
     response.error = 'An error occurred getting daily forecast from the server';
   }
@@ -88,6 +92,7 @@ export const getWeeklyForecast = async ({ locationId, tracer }) => {
     response.data = { forecast };
     logger.info(`Retrieved weekly forecast from accuweather (locationId: ${locationId})`, tracer);
   } catch (error) {
+    console.log(error);
     logger.error(`There was an error getting weekly forecast from accuweather (locationId: ${locationId})`, error, tracer);
     response.error = 'An error occurred getting weekly forecast from the server';
   }

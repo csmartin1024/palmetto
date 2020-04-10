@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import CanvasJSReact from '../../lib/canvasjs.react';
+import CanvasJSReact from '../../../lib/canvasjs.react';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 export default class HourlyWeatherGraph extends Component {
