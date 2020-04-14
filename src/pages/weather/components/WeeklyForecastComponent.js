@@ -1,13 +1,12 @@
 import React from 'react';
 import moment from 'moment';
 import { v4 } from 'uuid';
-const WEATHER_ICON_URL = 'https://www.accuweather.com/images/weathericons';
 
 const renderDay = dailyForecast => {
-  const { Date: forecastDate, Day, Temperature } = dailyForecast;
-  const iconURL = `${WEATHER_ICON_URL}/${Day.Icon}.svg`;
-  const { Minimum, Maximum } = Temperature || {};
-  const formattedDate = moment(forecastDate).format('dddd');
+  const { timestamp, weather, temperature } = dailyForecast;
+  const iconURL = `${weather.iconURL}`;
+  const { low, high } = temperature;
+  const formattedDate = moment.unix(timestamp).format('dddd');
 
   return (
     <article key={v4()} className="medi">
@@ -15,7 +14,7 @@ const renderDay = dailyForecast => {
         <div className="column is-half">
           <div className="media-content">
             <p>{formattedDate}</p>
-            {Maximum.Value}° F / {Minimum.Value}° F
+            {high.toFixed(0)}° F / {low.toFixed(0)}° F
           </div>
         </div>
         <div className="column is-half">
@@ -26,7 +25,7 @@ const renderDay = dailyForecast => {
           </figure>
           <div className="media-content">
             <div className="field">
-              <p className="">{Day.LongPhrase}</p>
+              <p className="">{weather.description}</p>
             </div>
           </div>
         </div>
@@ -37,8 +36,7 @@ const renderDay = dailyForecast => {
 
 export default props => {
   const forecast = props.weeklyForecast;
-  const { DailyForecasts } = forecast;
-  const forecasts = DailyForecasts ? DailyForecasts.map(renderDay) : [];
+  const forecasts = forecast && forecast.days ? forecast.days.map(renderDay) : [];
 
   return (
     <div className="tile is-child box weekly">
